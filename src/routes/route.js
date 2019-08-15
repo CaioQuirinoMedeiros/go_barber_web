@@ -10,7 +10,7 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
-  const signedIn = true;
+  const signedIn = false;
 
   if (!signedIn && isPrivate) {
     return <Redirect to="/" />;
@@ -36,7 +36,7 @@ export default function RouteWrapper({
 
 RouteWrapper.propTypes = {
   isPrivate: PropTypes.bool,
-  component: PropTypes.node.isRequired
+  component: PropTypes.oneOfType([PropTypes.element, PropTypes.elementType])
 };
 
 RouteWrapper.defaultPropts = {
