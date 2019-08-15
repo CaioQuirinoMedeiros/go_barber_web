@@ -1,0 +1,58 @@
+import { createGlobalStyle } from "styled-components";
+
+export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f5f5f5;
+      box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #999;
+      outline: 1px solid slategrey;
+    }
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+
+  a {
+    text-decoration: none
+  }
+
+  button {
+    font-family: inherit;
+    background: none;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+  } 
+`;
