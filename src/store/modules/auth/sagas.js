@@ -1,4 +1,5 @@
 import { all, takeLatest, put, call } from "redux-saga/effects";
+import { toast } from "react-toastify";
 
 import api from "~/services/api";
 import history from "~/services/history";
@@ -14,8 +15,7 @@ export function* signIn({ payload }) {
     const { token, user } = data;
 
     if (!user.provider) {
-      console.log("Usuário nao é provider");
-
+      toast.error("Você não é um provedor de serviço");
       throw new Error();
     }
 
@@ -23,9 +23,38 @@ export function* signIn({ payload }) {
 
     history.push("/dashboard");
   } catch (err) {
-    console.log(err);
+    toast.error(
+      err.response.data.error || "Falha na autenticação, verifique seus dados"
+    );
     yield put(signFailure());
   }
 }
 
-export default all([takeLatest("@auth/SIGN_IN_REQUEST", signIn)]);
+export function* signUp({ payload }) {
+  try {
+    const { name, email, password, passwordConfirmation } = payload;
+
+    console.log(payload);
+
+    yield call(api.post, "users", {
+      name,
+      email,
+      password,
+      passwordConfirmation,
+      provider: true
+    });
+
+    history.push("/");
+    toast.error("Cadastro criado com sucesso");
+  } catch (err) {
+    toast.error(
+      err.response.data.error || "Falha no cadastro, verifique seus dados"
+    );
+    yield put(signFailure());
+  }
+}
+
+export default all([
+  takeLatest("@auth/SIGN_IN_REQUEST", signIn),
+  takeLatest("@auth/SIGN_UP_REQUEST", signUp)
+]);
