@@ -17,7 +17,7 @@ export default function Notifications() {
       </Badge>
 
       <NotificationList>
-        <Scroll>
+        <Scroll className="perfect-scrollbar">
           <Notification unread>
             <p>Você possui um novo agendamento para amanhã</p>
             <time>há 2 dias</time>

@@ -57,5 +57,17 @@ export default createGlobalStyle`
 
   ul {
     list-style: none;
-  } 
+  }
+
+  .perfect-scrollbar {
+    .ps__rail-y,
+    .ps__rail-x {
+      background: none !important;
+    }
+
+    .ps__thumb-y,
+    .ps__thumb-x {
+      width: 6px !important;
+    }
+  }
 `;
