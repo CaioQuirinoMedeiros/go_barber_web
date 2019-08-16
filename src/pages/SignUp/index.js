@@ -26,7 +26,6 @@ export default function SignUp() {
   const { loading } = useSelector(state => state.auth);
 
   function handleSubmit({ name, email, password, passwordConfirmation }) {
-    console.log({ name, email, password, passwordConfirmation });
     dispatch(signUpRequest(name, email, password, passwordConfirmation));
   }
 
