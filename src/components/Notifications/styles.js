@@ -26,7 +26,8 @@ export const Badge = styled.button`
 `;
 
 export const NotificationList = styled.div`
-  width: 260px;
+  display: ${props => (props.visible ? "block" : "none")};
+  width: 300px;
   position: absolute;
   top: calc(100% + 30px);
   left: 50%;
@@ -50,7 +51,7 @@ export const NotificationList = styled.div`
 `;
 
 export const Notification = styled.div`
-  color: #fff;
+  color: ${props => (props.unread ? "#fff" : "rgba(255,255,255,0.6)")};
 
   & + div {
     margin-top: 15px;
@@ -63,31 +64,29 @@ export const Notification = styled.div`
     line-height: 18px;
   }
 
-  time {
-    font-size: 12px;
-    opacity: 0.6;
-  }
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
 
-  button {
-    font-size: 12px;
-    color: ${lighten(0.15, "#7159c1")};
-    padding: 0 5px;
-    margin: 0 5px;
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-  }
+    time {
+      font-size: 12px;
+      opacity: 0.6;
+    }
 
-  ${props =>
-    props.unread &&
-    css`
-      &::after {
-        content: "";
-        display: inline-block;
-        width: 7px;
-        height: 7px;
-        background: #ff892e;
-        border-radius: 50%;
+    button {
+      height: 8px;
+      width: 8px;
+      background: #ff892c;
+      border-radius: 50%;
+      transition: all 0.2s;
+
+      &:hover {
+        background: ${lighten(0.15, "#ff892c")};
       }
-    `}
+    }
+  }
 `;
 
 export const Scroll = styled(PerfectScrollbar)`
