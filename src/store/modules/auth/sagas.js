@@ -22,6 +22,7 @@ export function* signIn({ payload }) {
     yield put(signInSuccess(token, user));
 
     history.push("/dashboard");
+    toast.success("Bem-vindo");
   } catch (err) {
     toast.error(
       err.response.data.error || "Falha na autenticação, verifique seus dados"
