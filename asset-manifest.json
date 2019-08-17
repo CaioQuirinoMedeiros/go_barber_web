@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.2e82f604.chunk.js",
-    "main.js.map": "/static/js/main.2e82f604.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a4afe394.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a4afe394.js.map",
-    "static/css/2.97a972bb.chunk.css": "/static/css/2.97a972bb.chunk.css",
-    "static/js/2.2caa8dcd.chunk.js": "/static/js/2.2caa8dcd.chunk.js",
-    "static/js/2.2caa8dcd.chunk.js.map": "/static/js/2.2caa8dcd.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6c42fa9fc67ad73e5d50e33e1e7c4ea9.js": "/precache-manifest.6c42fa9fc67ad73e5d50e33e1e7c4ea9.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.97a972bb.chunk.css.map": "/static/css/2.97a972bb.chunk.css.map",
-    "static/media/logo-roxa.svg": "/static/media/logo-roxa.910146c3.svg",
-    "static/media/logo.svg": "/static/media/logo.5228e44e.svg"
+    "main.js": "/go_barber_web/static/js/main.9702e38e.chunk.js",
+    "main.js.map": "/go_barber_web/static/js/main.9702e38e.chunk.js.map",
+    "runtime~main.js": "/go_barber_web/static/js/runtime~main.590fdc72.js",
+    "runtime~main.js.map": "/go_barber_web/static/js/runtime~main.590fdc72.js.map",
+    "static/css/2.97a972bb.chunk.css": "/go_barber_web/static/css/2.97a972bb.chunk.css",
+    "static/js/2.a3f40576.chunk.js": "/go_barber_web/static/js/2.a3f40576.chunk.js",
+    "static/js/2.a3f40576.chunk.js.map": "/go_barber_web/static/js/2.a3f40576.chunk.js.map",
+    "index.html": "/go_barber_web/index.html",
+    "precache-manifest.bde6d3452f2e35a2632f931daf6dcce0.js": "/go_barber_web/precache-manifest.bde6d3452f2e35a2632f931daf6dcce0.js",
+    "service-worker.js": "/go_barber_web/service-worker.js",
+    "static/css/2.97a972bb.chunk.css.map": "/go_barber_web/static/css/2.97a972bb.chunk.css.map",
+    "static/media/logo-roxa.svg": "/go_barber_web/static/media/logo-roxa.910146c3.svg",
+    "static/media/logo.svg": "/go_barber_web/static/media/logo.5228e44e.svg"
   }
 }
