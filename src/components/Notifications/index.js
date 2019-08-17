@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { MdNotifications } from "react-icons/md";
-import { distanceInWordsToNow } from "date-fns";
+import { formatDistanceToNow, parseISO } from "date-fns";
 import pt from "date-fns/locale/pt";
 
 import api from "~/services/api";
@@ -45,7 +45,7 @@ export default function Notifications() {
 
       const newNotifications = data.map(notification => ({
         ...notification,
-        timeDistance: distanceInWordsToNow(notification.createdAt, {
+        timeDistance: formatDistanceToNow(parseISO(notification.createdAt), {
           addSuffix: true,
           locale: pt
         })
