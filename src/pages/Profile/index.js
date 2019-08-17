@@ -5,6 +5,8 @@ import * as Yup from "yup";
 
 import { updateProfileRequest } from "~/store/modules/user/actions";
 
+import AvatarInput from "./AvatarInput";
+
 import { Container } from "./styles";
 
 const schema = Yup.object().shape({
@@ -20,7 +22,8 @@ const schema = Yup.object().shape({
     .oneOf([Yup.ref("password")], "As senhas não conferem")
     .when("password", (password, field) =>
       password ? field.required("Confirme a sua senha") : field
-    )
+    ),
+  avatar_id: Yup.string()
 });
 
 export default function Profile() {
@@ -28,13 +31,14 @@ export default function Profile() {
   const dispatch = useDispatch();
 
   function handleSubmit(data) {
-    console.log(data);
     dispatch(updateProfileRequest(data));
   }
 
   return (
     <Container>
       <Form onSubmit={handleSubmit} schema={schema} initialData={profile}>
+        <AvatarInput name="avatar_id" />
+
         <Input name="name" placeholder="Nome completo" />
         <Input type="email" name="email" placeholder="E-mail" />
 
