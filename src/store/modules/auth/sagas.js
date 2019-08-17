@@ -44,7 +44,7 @@ export function* signUp({ payload }) {
     });
 
     history.push("/");
-    toast.error("Cadastro criado com sucesso");
+    toast.success("Cadastro criado com sucesso");
   } catch (err) {
     toast.error(
       err.response.data.error || "Falha no cadastro, verifique seus dados"
