@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/static/js/main.2e82f604.chunk.js",
+    "main.js.map": "/static/js/main.2e82f604.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a4afe394.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a4afe394.js.map",
+    "static/css/2.97a972bb.chunk.css": "/static/css/2.97a972bb.chunk.css",
+    "static/js/2.2caa8dcd.chunk.js": "/static/js/2.2caa8dcd.chunk.js",
+    "static/js/2.2caa8dcd.chunk.js.map": "/static/js/2.2caa8dcd.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.6c42fa9fc67ad73e5d50e33e1e7c4ea9.js": "/precache-manifest.6c42fa9fc67ad73e5d50e33e1e7c4ea9.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.97a972bb.chunk.css.map": "/static/css/2.97a972bb.chunk.css.map",
+    "static/media/logo-roxa.svg": "/static/media/logo-roxa.910146c3.svg",
+    "static/media/logo.svg": "/static/media/logo.5228e44e.svg"
+  }
+}
