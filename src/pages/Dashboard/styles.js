@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 600px;
-  margin: 50px auto;
+  padding: 40px;
+  flex: 1;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
 
@@ -19,6 +20,9 @@ export const Container = styled.div`
   }
 
   ul {
+    max-width: 550px;
+    min-width: 400px;
+    align-self: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;

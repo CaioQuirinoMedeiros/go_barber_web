@@ -1,15 +1,15 @@
-import styled from "styled-components";
-import { darken } from "polished";
+import styled from 'styled-components'
+import { darken } from 'polished'
 
 export const Container = styled.div`
+  padding: 10px 40px;
   max-width: 600px;
-  height: 100%;
-  margin: 20px auto;
+  min-width: 500px;
+  align-self: center;
 
   form {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
 
     input {
       background: rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@ export const Container = styled.div`
       transition: all 0.3s;
 
       &:hover {
-        background: ${darken(0.05, "#3b9eff")};
+        background: ${darken(0.05, '#3b9eff')};
       }
     }
 
@@ -80,7 +80,7 @@ export const Container = styled.div`
     transition: all 0.3s;
 
     &:hover {
-      background: ${darken(0.08, "#f64c75")};
+      background: ${darken(0.08, '#f64c75')};
     }
   }
-`;
+`

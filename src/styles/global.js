@@ -31,8 +31,10 @@ export default createGlobalStyle`
     }
   }
 
-  body, html, #root {
+  #root {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
   body {

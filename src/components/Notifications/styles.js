@@ -4,6 +4,7 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 
 export const Container = styled.div`
   position: relative;
+  z-index: 90;
 `;
 
 export const Badge = styled.button`
@@ -32,7 +33,7 @@ export const NotificationList = styled.div`
   top: calc(100% + 30px);
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 1);
   border-radius: 4px;
   padding: 15px 5px;
 
