@@ -1,6 +1,6 @@
 # Go Barber - WEB
 
-<img src='/screenshots/dashboard.png width="300"'> <img src='/screenshots/profile.png width="300"'>
+<img src="/screenshots/dashboard.png" width="300"> <img src="/screenshots/profile.png" width="300">
 
 ## About
 
