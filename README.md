@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Go Barber - WEB
 
-## Available Scripts
+<img src='/screenshots/dashboard.png width="300"'> <img src='/screenshots/profile.png width="300"'>
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+This project was developed over the [Rocketseat bootcamp course](https://rocketseat.com.br/bootcamp) and it's part of my portifolio. It's an application that helps customers schedule appointments with service providers.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Integration
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This web app is built with React and communicate with an [NodeJS API](https://github.com/CaioQuirinoMedeiros/go_barber_api). It's exclusively intended to the providers of the application. For customers, there's an [mobile App](https://github.com/CaioQuirinoMedeiros/go_barber_app) built with React Native.
 
-### `npm test`
+## Try it now
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I deployed it here on GitHub, try it out: [gobarber.com](https://caioquirinomedeiros.github.io/go_barber_web/)
 
-### `npm run build`
+- email: `caio2@gmail.com`
+- password: `123123123`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :arrow_down: Installing
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+**Cloning the repo**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+git clone https://github.com/CaioQuirinoMedeiros/go_barber_web.git
 
-### `npm run eject`
+cd go_barber_web
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Installing dependencies**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```shell
+yarn install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## :satellite: Connecting with the server API
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Follow the instructions on [the API project](https://github.com/CaioQuirinoMedeiros/go_barber_api) to have the server up and running
+2. Create a _.env_ file and set a variable `REACT_APP_API_URL` with the value of your server url
 
-## Learn More
+- It should looks like this: `CREATE_APP_API_URL=http://127.0.0.1:3333`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## :runner: Running
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+run in development mode
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```shell
+yarn start
+```
