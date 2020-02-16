@@ -1,26 +1,35 @@
-import produce from "immer";
+import produce from 'immer'
 
 const INITIAL_STATE = {
-  profile: null
-};
+  profile: null,
+  removeAvatarError: ''
+}
 
 export default function user(state = INITIAL_STATE, action) {
   return produce(state, draft => {
     switch (action.type) {
-      case "@auth/SIGN_IN_SUCCESS": {
-        draft.profile = action.payload.user;
-        break;
+      case '@auth/SIGN_IN_SUCCESS': {
+        draft.profile = action.payload.user
+        break
       }
-      case "@user/UPDATE_PROFILE_SUCCESS": {
-        draft.profile = action.payload.profile;
-        break;
+      case '@user/UPDATE_PROFILE_SUCCESS': {
+        draft.profile = action.payload.profile
+        break
       }
-      case "@auth/SIGN_OUT": {
-        draft.profile = null;
-        break;
+      case '@auth/SIGN_OUT': {
+        draft.profile = null
+        break
+      }
+      case '@user/REMOVE_AVATAR_SUCCESS': {
+        draft.profile = { ...state.profile, avatar_id: null, avatar: null }
+        break
+      }
+      case '@user/REMOVE_AVATAR_FAILURE': {
+        draft.removeAvatarError = action.payload.error
+        break
       }
       default:
-        return state;
+        return state
     }
-  });
+  })
 }
